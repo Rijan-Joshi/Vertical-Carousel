@@ -1,0 +1,109 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Align horizontally */
+  align-items: center; /* Align vertically */
+  user-select: none;
+}
+
+/* Hide the scrollbar but allow scrolling */
+/* For Chrome, Opera */
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  /* For Internet Explorer */
+  -ms-overflow-style: none;
+  /* For FireFox */
+  scrollbar-width: none;
+}
+
+.wrapper .card {
+  position: absolute;
+  width: 400px;
+  min-height: 320px;
+  padding: 15px;
+  border-radius: 15px;
+  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid rgba(241, 218, 212, 0.2); /* Border on the top */
+  border-left: 4px solid rgba(241, 218, 212, 0.2);
+
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  will-change: transform, opacity;
+}
+
+.card .main {
+  border-radius: 15px;
+  min-height: 120px;
+
+  background: rgba(255, 126, 95, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 5px 5px 3px rgba(255, 255, 255, 0.2),
+    5px 5px 15px rgba(0, 0, 0, 0);
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.circle {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(236, 125, 97, 0.6);
+  backdrop-filter: blur(20px);
+  box-shadow: inset 5px 4px 3px rgba(255, 255, 255, 0.2),
+    5px 5px 15px rgba(0, 0, 0, 0);
+}
+
+.details {
+  width: 100%;
+}
+
+.details .title {
+  height: 20px;
+  border-radius: 6px;
+
+  background: rgba(236, 125, 97, 0.6);
+  backdrop-filter: blur(20px);
+  box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2),
+    5px 5px 15px rgba(0, 0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.details .description {
+  height: 10px;
+  width: 50%;
+  border-radius: 3px;
+
+  background: rgba(236, 125, 97, 0.6);
+  backdrop-filter: blur(20px);
+  box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2),
+    5px 5px 15px rgba(0, 0, 0, 0);
+}
+
+/* Visually Hidden Content */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

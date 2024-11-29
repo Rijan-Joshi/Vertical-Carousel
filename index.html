@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Vertical Carousel</title>
+
+    <!-- Performance: Preload critical resources -->
+    <link rel="preload" href="styles/global.css" as="style" />
+    <link rel="preload" href="styles/styles.css" as="style" />
+    <link rel="preload" href="styles/animation.css" as="style" />
+    <link rel="preload" href="scripts/index.js" as="script" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/animation.css" />
+  </head>
+  <body>
+    <main
+      class="carousel-container"
+      role="region"
+      aria-label="Interactive Vertical Carousel"
+    >
+      <div class="wrapper" role="list" aria-live="polite"></div>
+    </main>
+
+    <!-- Hidden content for screen readers -->
+    <section id="main-content" class="visually-hidden">
+      <h1>Vertical Carousel Interface</h1>
+      <p>Interactive card-based navigation system</p>
+    </section>
+
+    <!-- Performance: Async script loading -->
+    <script src="scripts/index.js" async defer></script>
+  </body>
+</html>
